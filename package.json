@@ -3,11 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build:dist": "vue-cli-service build --mode dist",
-    "build:docs": "vue-cli-service build --mode docs",
-    "build:all": "npm run build:dist && npm run build:docs",
     "serve": "vue-cli-service serve",
-    "build": "npm run build:all",
+    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
