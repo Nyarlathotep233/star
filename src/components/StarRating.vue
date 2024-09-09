@@ -1,5 +1,5 @@
 <template>
-  <div class="container text-center mt-5" style="margin-top: 60px !important;">
+  <div class="container text-center mt-5">
     <div class="row" v-for="(row, rowIndex) in starRows" :key="rowIndex">
       <div class="col-12 d-flex justify-content-center">
         <div
@@ -73,45 +73,47 @@ export default {
 </script>
 
 <style scoped>
+/* 1vw = 2560px / 100 = 25.6px。 */
+/* 要将像素值转换为 vw，可以使用 像素值 / 25.6 */
+
+.container {
+  margin-top: 2.34vw !important; /* 60px => 2.34vw */
+}
 
 .star-container {
   cursor: pointer;
   display: inline-block;
-  margin: 20px;
+  margin: 0.78vw; /* 20px => 0.78vw */
   position: relative;
 }
 
-
 .star {
-  width: 160px;
-  height: 160px;
+  width: 6.25vw; /* 160px => 6.25vw */
+  height: 6.25vw; /* 保持宽高一致 */
   transition: opacity 0.3s;
 }
-
 
 .name {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
-  font-size: 16px;
-  letter-spacing: 5px;
-  /* 增加字母之间的间距 */
-  padding: 5px;
-  padding-left: 10px;
-  /* 增加内边距，让名字周围有更多的空间 */
+  font-size: 0.63vw; /* 16px => 0.63vw */
+  letter-spacing: 0.2vw; /* 5px => 0.2vw */
+  padding: 0.2vw; /* 5px => 0.2vw */
+  padding-left: 0.39vw; /* 10px => 0.39vw */
   font-weight: bold;
   width: 100%;
   color: white;
   display: flex;
   align-items: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0.08vw 0.08vw 0.16vw rgba(0, 0, 0, 0.5); /* 2px => 0.08vw, 4px => 0.16vw */
   justify-content: center;
 }
 
 .name.active {
   color: black;
-  text-shadow: 2px 2px 4px rgba(80, 80, 80, 0.5);
-
+  text-shadow: 0.08vw 0.08vw 0.16vw rgba(80, 80, 80, 0.5); /* 同样使用 vw 单位 */
 }
+
 </style>
