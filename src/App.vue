@@ -38,7 +38,7 @@ body,
   text-align: center;
   color: #2c3e50;
   /* 设置背景图片 */
-  background-image: url('@/assets/bkg2.jpg');
+  background-image: url('@/assets/bkg3.png');
   background-size: cover; /* 确保背景图片覆盖整个容器 */
   background-position: center; /* 将背景图片居中 */
   background-repeat: no-repeat; /* 防止背景图片重复 */
